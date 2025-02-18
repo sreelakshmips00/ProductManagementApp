@@ -1,0 +1,27 @@
+﻿@model ProductManagementApp.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Welcome to Product Management App</h1>
+
+    <form method="post" action="@Url.Action("AddProduct", "Product")">
+        <label>Product Name:</label><br />
+        <input type="text" name="ProductName" /><br />
+        <label>Price:</label><br />
+        <input type="number" name="Price" /><br />
+        <label>Stock:</label><br />
+        <input type="number" name="Stock" /><br />
+        <label>Color:</label><br />
+        <input type="text" name="Color" /><br />
+        <input type="submit" value="Add Product" />
+    </form>
+
+    <br />
+    <button onclick="window.location.href='@Url.Action("ViewProducts", "Product")'">View Products</button>
+</body>
+</html>

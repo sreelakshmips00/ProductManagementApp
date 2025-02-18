@@ -1,0 +1,24 @@
+﻿@model ProductManagementApp.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+
+    <form method="post" action="@Url.Action("EditProduct", "Product")">
+        <input type="hidden" name="ProductId" value="@Model.ProductId" />
+        <label>Product Name:</label><br />
+        <input type="text" name="ProductName" value="@Model.ProductName" /><br />
+        <label>Price:</label><br />
+        <input type="number" name="Price" value="@Model.Price" /><br />
+        <label>Stock:</label><br />
+        <input type="number" name="Stock" value="@Model.Stock" /><br />
+        <label>Color:</label><br />
+        <input type="text" name="Color" value="@Model.Color" /><br />
+        <input type="submit" value="Update Product" />
+    </form>
+</body>
+</html>
